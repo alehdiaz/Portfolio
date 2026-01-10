@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sketch transition-colors duration-300;
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .dark body {
+    @apply bg-[#1a1a1a] text-[#e0e0e0];
+    background-image: radial-gradient(#333 1px, transparent 1px);
+  }
+
+  /* Barra de desplazamiento personalizada */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pencil rounded-full border-2 border-paper;
+  }
+}
+
+@layer components {
+  .sketch-btn {
+    @apply px-4 py-2 border-2 border-ink rounded transition-transform hover:-translate-y-1 hover:shadow-sketch active:translate-y-0 active:shadow-none;
+  }
+
+  .sketch-card {
+    @apply p-4 border-2 border-ink rounded bg-white dark:bg-zinc-800 shadow-sketch relative overflow-hidden;
+  }
+}
