@@ -18,7 +18,7 @@ const Contact = () => {
                     </a>
                 </div>
                 <div className="mt-8 flex flex-col gap-2 opacity-80 font-bold">
-                    <p>+54 1166918613</p>
+
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alejofvc@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:underline">alejofvc@gmail.com</a>
                 </div>
             </div>
