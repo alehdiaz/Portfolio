@@ -33,18 +33,21 @@ const Skills = () => {
     const scrollRef = useRef(null);
     const requestRef = useRef();
 
+    const scrollPos = useRef(0);
     const isDragging = useRef(false);
     const startX = useRef(0);
-    const scrollLeft = useRef(0);
+    const startScrollLeft = useRef(0);
 
     // Lógica de desplazamiento automático infinito
     const animate = () => {
         // Solo desplazar si NO se está arrastrando
         if (!isDragging.current && scrollRef.current) {
-            scrollRef.current.scrollLeft += 0.5;
+            scrollPos.current += 0.5;
+            scrollRef.current.scrollLeft = scrollPos.current;
 
             // Restablecer al llegar al final del primer conjunto
             if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
+                scrollPos.current = 0;
                 scrollRef.current.scrollLeft = 0;
             }
         }
@@ -60,13 +63,17 @@ const Skills = () => {
     const handleMouseDown = (e) => {
         isDragging.current = true;
         startX.current = e.pageX - scrollRef.current.offsetLeft;
-        scrollLeft.current = scrollRef.current.scrollLeft;
+        startScrollLeft.current = scrollRef.current.scrollLeft;
         scrollRef.current.style.cursor = 'grabbing';
     };
 
     const handleMouseUp = () => {
         isDragging.current = false;
-        if (scrollRef.current) scrollRef.current.style.cursor = 'grab';
+        if (scrollRef.current) {
+            scrollRef.current.style.cursor = 'grab';
+            // Sincronizar la posición flotante con donde lo dejó el usuario
+            scrollPos.current = scrollRef.current.scrollLeft;
+        }
     };
 
     const handleMouseMove = (e) => {
@@ -74,12 +81,18 @@ const Skills = () => {
         e.preventDefault();
         const x = e.pageX - scrollRef.current.offsetLeft;
         const walk = (x - startX.current) * 1;
-        scrollRef.current.scrollLeft = scrollLeft.current - walk;
+        scrollRef.current.scrollLeft = startScrollLeft.current - walk;
     };
 
     const handleMouseLeave = () => {
-        isDragging.current = false; // Asegurar que el arrastre se detenga si se sale
-        if (scrollRef.current) scrollRef.current.style.cursor = 'grab';
+        if (isDragging.current) {
+            isDragging.current = false;
+            if (scrollRef.current) {
+                scrollRef.current.style.cursor = 'grab';
+                // Sincronizar también si el mouse sale mientras se arrastra
+                scrollPos.current = scrollRef.current.scrollLeft;
+            }
+        }
     };
 
     // Claves duplicadas para el desplazamiento infinito
