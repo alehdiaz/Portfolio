@@ -3,29 +3,29 @@ import { Code, Database, Server, Cpu, Globe, Terminal, Layout, Box, PenTool, Git
 
 const skillsData = {
     Frontend: [
-        { name: 'HTML', icon: '/icons/html-5-svgrepo-com (1).svg' },
-        { name: 'CSS', icon: '/icons/css-3-svgrepo-com (1).svg' },
-        { name: 'JavaScript', icon: '/icons/javascript-svgrepo-com (1).svg' },
-        { name: 'ReactJS', icon: '/icons/react-svgrepo-com.svg' },
+        { name: 'HTML', icon: '/Portfolio/icons/html-5-svgrepo-com (1).svg' },
+        { name: 'CSS', icon: '/Portfolio/icons/css-3-svgrepo-com (1).svg' },
+        { name: 'JavaScript', icon: '/Portfolio/icons/javascript-svgrepo-com (1).svg' },
+        { name: 'ReactJS', icon: '/Portfolio/icons/react-svgrepo-com.svg' },
     ],
     Backend: [
-        { name: 'Python', icon: '/icons/python-svgrepo-com (1).svg' },
-        { name: 'MySQL', icon: '/icons/mysql-svgrepo-com.svg' },
-        { name: 'SQLAlchemy', icon: '/icons/sql-svgrepo-com.svg' },
-        { name: 'C', icon: '/icons/c-svgrepo-com.svg' },
+        { name: 'Python', icon: '/Portfolio/icons/python-svgrepo-com (1).svg' },
+        { name: 'MySQL', icon: '/Portfolio/icons/mysql-svgrepo-com.svg' },
+        { name: 'SQLAlchemy', icon: '/Portfolio/icons/sql-svgrepo-com.svg' },
+        { name: 'C', icon: '/Portfolio/icons/c-svgrepo-com.svg' },
     ],
     Aprendiendo: [
-        { name: 'Docker', icon: '/icons/docker-svgrepo-com.svg' },
-        { name: 'TypeScript', icon: '/icons/typescript-svgrepo-com.svg' },
-        { name: 'Figma', icon: '/icons/figma-svgrepo-com.svg' },
-        { name: 'TailwindCSS', icon: '/icons/tailwind-svgrepo-com.svg' },
+        { name: 'Docker', icon: '/Portfolio/icons/docker-svgrepo-com.svg' },
+        { name: 'TypeScript', icon: '/Portfolio/icons/typescript-svgrepo-com.svg' },
+        { name: 'Figma', icon: '/Portfolio/icons/figma-svgrepo-com.svg' },
+        { name: 'TailwindCSS', icon: '/Portfolio/icons/tailwind-svgrepo-com.svg' },
     ],
     Herramientas: [
-        { name: 'Git', icon: '/icons/git-svgrepo-com.svg' },
-        { name: 'GitHub', icon: '/icons/github-142-svgrepo-com.svg' },
-        { name: 'Terminal', icon: '/icons/terminal-svgrepo-com.svg' },
-        { name: 'VSCode', icon: '/icons/vscode-svgrepo-com.svg' },
-        { name: 'WordPress', icon: '/icons/wordpress-icon-svgrepo-com.svg' },
+        { name: 'Git', icon: '/Portfolio/icons/git-svgrepo-com.svg' },
+        { name: 'GitHub', icon: '/Portfolio/icons/github-142-svgrepo-com.svg' },
+        { name: 'Terminal', icon: '/Portfolio/icons/terminal-svgrepo-com.svg' },
+        { name: 'VSCode', icon: '/Portfolio/icons/vscode-svgrepo-com.svg' },
+        { name: 'WordPress', icon: '/Portfolio/icons/wordpress-icon-svgrepo-com.svg' },
     ],
 };
 
