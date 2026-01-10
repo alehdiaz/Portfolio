@@ -45,9 +45,10 @@ const Hero = ({ theme }) => {
                         loop
                         muted
                         playsInline
+                        preload="auto"
                         className="w-full h-full object-cover scale-[1.02]"
                     >
-                        <source src={theme === 'dark' ? "/perfil-b.mp4" : "/perfil-w.mp4"} type="video/mp4" />
+                        <source src={theme === 'dark' ? "/Portfolio/perfil-b.mp4" : "/Portfolio/perfil-w.mp4"} type="video/mp4" />
                         Tu navegador no soporta videos.
                     </video>
                 </div>
