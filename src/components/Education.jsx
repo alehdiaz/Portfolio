@@ -6,7 +6,13 @@ const Education = () => {
         <section className="mb-16">
             <h3 className="text-3xl font-bold mb-8 border-b-2 border-ink inline-block pb-2">EDUCACION</h3>
             <div className="p-6 border-2 border-ink rounded-lg bg-white dark:bg-zinc-800 shadow-sketch flex gap-4 items-start">
-                <GraduationCap size={48} className="shrink-0" />
+                <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-ink bg-white flex items-center justify-center">
+                    <img
+                        src="/Portfolio/uba.jpeg"
+                        alt="UBA Logo"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
                 <div>
                     <h4 className="text-2xl font-bold">Ingeniería Informática</h4>
                     <h5 className="text-xl">Facultad de Ingeniería - Universidad de Buenos Aires</h5>
