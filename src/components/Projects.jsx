@@ -5,15 +5,14 @@ const projects = [
     {
         title: 'Likeidiomas',
         description: 'Desarrollo de pagina web para empresa educativa.',
-        images: ['/public/proyecto1.jpeg', '/public/proyecto1.1.jpeg', '/public/proyecto1.2.jpeg'],
+        images: ['/Portfolio/proyecto1.jpeg', '/Portfolio/proyecto1.1.jpeg', '/Portfolio/proyecto1.2.jpeg'],
         link: 'https://likeidiomas.com/',
     },
     {
         title: 'AltamarCrew',
         description: 'Desarrollo de pagina web para naviera.',
-        images: ['/public/proyecto2.jpeg', '/public/proyecto2.1.jpeg', '/public/proyecto2.2.jpeg'],
+        images: ['/Portfolio/proyecto2.jpeg', '/Portfolio/proyecto2.1.jpeg', '/Portfolio/proyecto2.2.jpeg'],
         link: 'https://altamarcrew.com/',
-
     }
 ];
 
