@@ -1,7 +1,21 @@
 import React from 'react';
 import { smoothScroll } from '../utils/scroll';
+import videoDark from '../assets/perfil-b.webm';
+import videoLight from '../assets/perfil-w.webm';
 
 const Hero = ({ theme }) => {
+    const videoRef = React.useRef(null);
+
+    React.useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.load(); // Force reload when theme changes
+            videoRef.current.play().catch(error => {
+                console.log("Video play failed:", error);
+            });
+        }
+    }, [theme]);
+
+    const videoSrc = theme === 'dark' ? videoDark : videoLight;
 
     return (
         <section className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16 animate-fade-in-up">
@@ -40,6 +54,7 @@ const Hero = ({ theme }) => {
                 {/* Contenedor del video */}
                 <div className="absolute inset-0 bg-transparent rounded-full border-4 border-ink overflow-hidden isolate">
                     <video
+                        ref={videoRef}
                         key={theme}
                         autoPlay
                         loop
@@ -48,7 +63,7 @@ const Hero = ({ theme }) => {
                         preload="auto"
                         className="w-full h-full object-cover scale-[1.02]"
                     >
-                        <source src={theme === 'dark' ? "/Portfolio/perfil-b.mp4" : "/Portfolio/perfil-w.mp4"} type="video/mp4" />
+                        <source src={videoSrc} type="video/webm" />
                         Tu navegador no soporta videos.
                     </video>
                 </div>
