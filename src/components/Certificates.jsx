@@ -78,16 +78,18 @@ const Certificates = () => {
                                 </p>
                             </div>
 
-                            <div className="pt-2 border-t border-dashed border-ink mt-auto">
-                                <a
-                                    href={cert.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="sketch-btn inline-flex items-center gap-2 px-4 py-2 text-sm font-bold"
-                                >
-                                    Ver Certificado <ExternalLink size={16} />
-                                </a>
-                            </div>
+                            {cert.link && (
+                                <div className="pt-2 border-t border-dashed border-ink mt-auto">
+                                    <a
+                                        href={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="sketch-btn inline-flex items-center gap-2 px-4 py-2 text-sm font-bold"
+                                    >
+                                        Ver Certificado <ExternalLink size={16} />
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
