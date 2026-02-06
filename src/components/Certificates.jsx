@@ -24,6 +24,17 @@ Gestión de Contenidos (CMS): Manejo del panel de WordPress para la creación, e
 Diseño y Creatividad: Aplicación de principios de diseño web y personalización visual para mejorar la experiencia del usuario (UX).`,
         link: 'https://www.coursera.org/account/accomplishments/verify/FV3JDSM8RGRF',
         icon: '/Portfolio/icons/coursera.jpg'
+    },
+    {
+        title: 'SQL sobre Databricks',
+        image: '/Portfolio/certificado-lovelytics.jpeg',
+        description: `Consultas Multitabla: Integración y normalización de datos relacionales mediante el uso avanzado de JOINS.
+Lógica de Negocio y KPIs: Creación de métricas personalizadas y segmentación dinámica mediante estructuras condicionales CASE WHEN.
+Agregación Avanzada: Análisis de tendencias y patrones estratégicos utilizando funciones de agregado y filtrado con HAVING.
+Análisis Temporal: Transformación de datos cronológicos para generar reportes comparativos históricos.
+Subconsultas y Optimización: Implementación de lógica anidada para comparativas estadísticas y segmentación basada en métricas globales.
+Auditoría de Datos: Aplicación de técnicas de limpieza y detección de inconsistencias para asegurar la integridad de la información.`,
+        icon: '/Portfolio/icons/lovelytics.webp'
     }
 ];
 
